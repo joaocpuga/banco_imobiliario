@@ -31,7 +31,7 @@ def partida():
         for j, jog in enumerate(jogadores):
             rodada +=1
             if rodada >= 1000:
-                return {"jogador": jog.nome, "timeout": True, "rodadas": rodada}
+                return {"jogador": jogadores[0].nome, "timeout": True, "rodadas": rodada}
             if jog.fora is False:
                 status = jog.jogar(tabuleiro, j)
                 if status is False:
